@@ -1,43 +1,45 @@
 # Laptop Warranty Tracker
 
-## Overview
-
-PowerShell-based warranty and tech refresh tracking solution designed to identify laptops approaching warranty expiration.
+A PowerShell-based solution for tracking laptop warranty expiration and supporting endpoint technology refresh planning.
 
 ## Features
 
-- Import laptop inventory from CSV
-- Calculate remaining warranty period
-- Identify devices expiring within 90 days
-- Generate warranty reports
-- Support proactive tech refresh planning
+* Imports laptop inventory from a CSV file
+* Calculates remaining warranty days
+* Identifies devices approaching warranty expiration
+* Generates CSV reports for asset management
+* Supports proactive tech refresh planning
 
 ## Technologies Used
 
-- PowerShell
-- CSV Processing
-- Reporting Automation
+* PowerShell
+* CSV Reporting
+* Date Calculations
+* PSCustomObject
+* Export-Csv
 
-## Skills Demonstrated
+## Sample Input
 
-- Endpoint Lifecycle Management
-- Asset Management
-- Tech Refresh Planning
-- PowerShell Automation
-- Reporting
+| SerialNumber | User       | Model               | DeploymentDate | WarrantyExpiry |
+| ------------ | ---------- | ------------------- | -------------- | -------------- |
+| ABC123       | John Doe   | HP EliteBook 840 G8 | 2023-07-15     | 2026-07-15     |
+| XYZ456       | Jane Smith | Dell Latitude 5440  | 2022-10-20     | 2025-10-20     |
 
-## Real-World Use Case
+## Sample Output
 
-In enterprise environments, laptops are typically refreshed after their warranty period or according to technology refresh policies. This solution helps identify devices approaching refresh eligibility and supports proactive planning.
+Devices Expiring Within 90 Days
+
+ABC123 - 37 Days Remaining
+
+XYZ456 - Warranty Expired (230 Days Ago)
+
+## Screenshot
+
+![Script Output](ScriptOutput.png)
 
 ## Future Enhancements
 
-- Email notifications
-- Excel export
-- Dashboard reporting
-- Microsoft Intune integration
-- ServiceNow integration
-
-## Author
-
-Lakshmi Prasanna
+* Email notifications for expiring devices
+* Excel report generation
+* Microsoft Graph integration
+* Intune device inventory integration
